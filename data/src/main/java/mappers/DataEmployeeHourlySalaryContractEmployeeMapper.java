@@ -17,8 +17,8 @@ public class DataEmployeeHourlySalaryContractEmployeeMapper implements Function<
                 dataEmployee.id,
                 dataEmployee.name,
                 dataEmployee.contractTypeName,
-                dataEmployee.roleName,
                 dataEmployee.roleDescription,
+                dataEmployee.roleName,
                 dataEmployee.hourlySalary);
     }
 }

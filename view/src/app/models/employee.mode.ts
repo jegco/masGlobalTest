@@ -3,7 +3,7 @@ export interface Employee {
   name: string;
   contractTypeName: string;
   roleId: number;
-  roleName: string;
+  role: string;
   roleDescription: any;
   hourlySalary: number;
   monthlySalary: number;

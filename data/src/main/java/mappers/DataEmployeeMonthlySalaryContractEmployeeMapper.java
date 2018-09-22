@@ -17,8 +17,8 @@ public class DataEmployeeMonthlySalaryContractEmployeeMapper implements Function
                 dataEmployee.id,
                 dataEmployee.name,
                 dataEmployee.contractTypeName,
-                dataEmployee.roleName,
                 dataEmployee.roleDescription,
+                dataEmployee.roleName,
                 dataEmployee.monthlySalary);
     }
 }

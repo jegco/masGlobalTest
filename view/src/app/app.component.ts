@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeesService } from './services/employees.service';
 import { Employee } from './models/employee.mode';
 import { Observable } from 'rxjs';
+import { isNumber, isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-root',
@@ -24,9 +25,13 @@ export class AppComponent implements OnInit {
   }
 
   searchEmployees(id: number) {
-    this.selectedId = id;
-    this.showBar = true;
-    this.employees = this.employeeService.getEmployeesById(id);
+    if (id) {
+      this.selectedId = id;
+      this.showBar = true;
+      this.employees = this.employeeService.getEmployeesById(id);
+    } else {
+      this.employees = this.employeeService.getEmployees();
+    }
   }
 
   clearFilters() {

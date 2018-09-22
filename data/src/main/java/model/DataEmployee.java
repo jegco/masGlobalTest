@@ -6,8 +6,8 @@ public class DataEmployee {
     public int id;
     public String name;
     public String contractTypeName;
-    public String roleDescription;
-    @Nullable public String roleName;
+    @Nullable public String roleDescription;
+    public String roleName;
     public int roleId;
     public double hourlySalary;
     public double monthlySalary;
