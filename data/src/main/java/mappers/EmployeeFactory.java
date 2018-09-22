@@ -1,6 +1,6 @@
 package mappers;
 
-import model.APIEmployee;
+import model.DataEmployee;
 import model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -11,19 +11,19 @@ import org.springframework.stereotype.Component;
 public class EmployeeFactory {
 
     @Autowired
-    private ApiEmployeeHourlySalaryContractEmployeeMapper apiEmployeeHourlySalaryContractEmployeeMapper;
+    private DataEmployeeHourlySalaryContractEmployeeMapper dataEmployeeHourlySalaryContractEmployeeMapper;
 
     @Autowired
-    private ApiEmployeeMonthlySalaryContractEmployeeMapper apiEmployeeMonthlySalaryContractEmployeeMapper;
+    private DataEmployeeMonthlySalaryContractEmployeeMapper dataEmployeeMonthlySalaryContractEmployeeMapper;
 
-    public Employee getEmployee(APIEmployee apiEmployee) {
-        switch (apiEmployee.contractTypeName) {
-            case "HourlySalaryEmployee":
-                return apiEmployeeHourlySalaryContractEmployeeMapper.
-                        apply(apiEmployee);
+    public Employee getEmployee(DataEmployee dataEmployee) {
+        switch (dataEmployee.contractTypeName) {
+            case "${datalayer.hoyrly-employee}":
+                return dataEmployeeHourlySalaryContractEmployeeMapper.
+                        apply(dataEmployee);
             default:
-                return apiEmployeeMonthlySalaryContractEmployeeMapper.
-                        apply(apiEmployee);
+                return dataEmployeeMonthlySalaryContractEmployeeMapper.
+                        apply(dataEmployee);
         }
     }
 }

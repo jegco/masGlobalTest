@@ -2,12 +2,10 @@ package repositories;
 
 import io.reactivex.Observable;
 import model.Employee;
-
-import java.util.Collection;
-
+import java.util.List;
 
 public interface IEmployeeRepository {
-    Observable<Collection<Employee>> getEmployee(int id);
+    Observable<List<Employee>> getEmployee(int id);
 
-    Observable<Collection<Employee>> getEmployees();
+    Observable<List<Employee>> getEmployees();
 }

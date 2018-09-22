@@ -2,7 +2,7 @@ package model;
 
 import com.sun.istack.internal.Nullable;
 
-public class APIEmployee {
+public class DataEmployee {
     public int id;
     public String name;
     public String contractTypeName;

@@ -4,6 +4,8 @@ import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+
 @Service
 public abstract class ObservableUseCase<R, P> implements IUseCase<R, P> {
 

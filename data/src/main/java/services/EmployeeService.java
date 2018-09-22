@@ -1,14 +1,14 @@
 package services;
 
 import io.reactivex.Observable;
-import model.APIEmployee;
+import model.DataEmployee;
 import org.springframework.stereotype.Component;
 import retrofit2.http.GET;
 
-import java.util.Collection;
+import java.util.List;
 
 @Component
 public interface EmployeeService {
     @GET("employees")
-    Observable<Collection<APIEmployee>> getEmployees();
+    Observable<List<DataEmployee>> getEmployees();
 }

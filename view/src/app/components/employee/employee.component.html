@@ -1,0 +1,15 @@
+<mat-card fxLayout="row">
+  <mat-card-header fxFlex="30%"
+                   fxFlexAlign="start">
+    <div mat-card-avatar
+         class="example-header-image"></div>
+    <mat-card-title class="big-title">{{employee.name}}</mat-card-title>
+    <mat-card-subtitle>{{employee.roleName}}</mat-card-subtitle>
+  </mat-card-header>
+  <div fxFlex="70%"
+       fxLayout="row"
+       fxLayoutAlign="end">
+    <div class="salary"
+         fxFlexAlign="center">{{employee.salary | currency}}</div>
+  </div>
+</mat-card>

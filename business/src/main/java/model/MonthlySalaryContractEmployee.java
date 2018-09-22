@@ -27,3 +27,4 @@ public class MonthlySalaryContractEmployee extends Employee {
         return salary;
     }
 }
+

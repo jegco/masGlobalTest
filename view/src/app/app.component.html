@@ -1,0 +1,19 @@
+<mg-header></mg-header>
+<div class="content"
+     fxLayout="row"
+     fxLayoutGap="10px">
+  <mg-search-widget fxFlex="30%"
+                    (search)="searchEmployees($event)">
+  </mg-search-widget>
+  <div fxFlex="60%"
+       fxLayout="column"
+       fxLayoutGap="20px">
+    <mg-filters-bar [selectedId]="selectedId"
+                    *ngIf="showBar"
+                    (clearFiltersPressed)="clearFilters()">
+    </mg-filters-bar>
+    <mg-employee-list [employees]="employees | async">
+    </mg-employee-list>
+  </div>
+
+</div>

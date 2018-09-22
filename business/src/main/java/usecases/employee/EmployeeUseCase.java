@@ -7,20 +7,17 @@ import org.springframework.stereotype.Service;
 import repositories.IEmployeeRepository;
 import usecases.base.ObservableUseCase;
 
-import java.util.Collection;
+import java.io.IOException;
+import java.util.List;
 
 @Service
-public class EmployeeUseCase extends ObservableUseCase<Collection<Employee>, Integer> {
+public class EmployeeUseCase extends ObservableUseCase<List<Employee>, Integer> {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
 
     @Override
-    protected Observable<Collection<Employee>> buildUseCase(Integer params) {
-        if (params == -1) {
-            return employeeRepository.getEmployees();
-        } else {
-            return employeeRepository.getEmployee(params);
-        }
+    protected Observable<List<Employee>> buildUseCase(Integer params) {
+        return params == null ? employeeRepository.getEmployees() : employeeRepository.getEmployee(params);
     }
 }

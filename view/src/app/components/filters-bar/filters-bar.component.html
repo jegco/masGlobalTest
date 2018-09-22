@@ -1,0 +1,15 @@
+<div class="filters"
+     fxLayout="row"
+     fxLayoutAlign="start center"
+     fxLayoutGap="10px">
+  <span>Filters: </span>
+  <mat-chip-list>
+    <mat-chip>
+      ID: {{selectedId}}
+      <mat-icon matChipRemove
+                (click)="onClearFiltersPressed()">
+        cancel
+      </mat-icon>
+    </mat-chip>
+  </mat-chip-list>
+</div>

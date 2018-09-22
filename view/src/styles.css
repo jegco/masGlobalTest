@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+    padding-top: 60px;
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,18 @@
+<form [formGroup]='form'
+      (ngSubmit)="onSubmit()"
+      fxLayout="row"
+      fxLayoutGap="10px"
+      fxLayoutAlign="center center">
+    <mat-form-field>
+        <input matInput
+               formControlName="id"
+               placeholder="Employee ID">
+        <mat-error *ngIf="!form.controls['id'].valid">
+            Invalid
+            <strong>ID</strong>
+        </mat-error>
+    </mat-form-field>
+    <button type="submit"
+            mat-raised-button
+            color="primary">Search</button>
+</form>
