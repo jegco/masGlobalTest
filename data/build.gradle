@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+version 'unspecified'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext.retrofit = '2.0.1'
+ext.retrofit_adapter = '2.2.0'
+ext.retrofit_interceptor = '3.2.0'
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.springframework', name: 'spring-context', version: '3.0.2.RELEASE'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_adapter"
+    implementation 'com.squareup.okio:okio:1.6.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$retrofit_interceptor"
+    implementation "com.squareup.okhttp3:okhttp:$retrofit_interceptor"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$retrofit_interceptor"
+
+    implementation project(":business")
+}

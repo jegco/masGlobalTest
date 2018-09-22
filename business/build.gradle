@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+version 'unspecified'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext.rxJavaVersion = "2.1.17"
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation group: 'org.springframework', name: 'spring-context', version: '3.0.2.RELEASE'
+}
