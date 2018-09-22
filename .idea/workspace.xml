@@ -4,20 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/data/src/main/java/repositories/EmployeeRepository.java" line="18" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0996ea2c-f5a3-482a-90cd-4d52d2781cb5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/out/production/classes/mappers/DataEmployeeHourlySalaryContractEmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/out/production/classes/mappers/DataEmployeeHourlySalaryContractEmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/out/production/classes/mappers/DataEmployeeMonthlySalaryContractEmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/out/production/classes/mappers/DataEmployeeMonthlySalaryContractEmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/out/production/classes/model/DataEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/out/production/classes/model/DataEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/mappers/DataEmployeeHourlySalaryContractEmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/mappers/DataEmployeeHourlySalaryContractEmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/mappers/DataEmployeeMonthlySalaryContractEmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/mappers/DataEmployeeMonthlySalaryContractEmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/model/DataEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/model/DataEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/controllers/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/components/employee/employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/components/employee/employee.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/models/employee.mode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/models/employee.mode.ts" afterDir="false" />
-    </list>
+    <list default="true" id="0996ea2c-f5a3-482a-90cd-4d52d2781cb5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -902,7 +889,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -1190,7 +1177,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1201,12 +1187,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.3290938" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.2948718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.2948718" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32763532" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32763532" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24899329" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24899329" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
