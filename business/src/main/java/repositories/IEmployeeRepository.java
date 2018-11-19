@@ -1,11 +1,10 @@
 package repositories;
 
-import io.reactivex.Observable;
 import model.Employee;
-import java.util.List;
+import reactor.core.publisher.Flux;
 
 public interface IEmployeeRepository {
-    Observable<List<Employee>> getEmployee(int id);
+    Flux<Employee> getEmployee(int id);
 
-    Observable<List<Employee>> getEmployees();
+    Flux<Employee> getEmployees();
 }

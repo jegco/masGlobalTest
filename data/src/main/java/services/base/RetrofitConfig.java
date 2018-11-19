@@ -1,5 +1,6 @@
 package services.base;
 
+import com.jakewharton.retrofit2.adapter.reactor.ReactorCallAdapterFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import retrofit2.Retrofit;
@@ -16,7 +17,7 @@ public class RetrofitConfig {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addCallAdapterFactory(ReactorCallAdapterFactory.create())
                 .build();
     }
 

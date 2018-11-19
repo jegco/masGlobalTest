@@ -28,7 +28,7 @@ targetCompatibility = 1.8
 ext.rxJavaVersion = "2.1.17"
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    compile('org.springframework.boot:spring-boot-starter-webflux')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation group: 'io.reactivex', name: 'rxjava-reactive-streams', version: '0.3.0'

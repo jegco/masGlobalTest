@@ -1,14 +1,11 @@
 package repositories;
 
-import io.reactivex.Observable;
 import mappers.EmployeeFactory;
 import model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Flux;
 import services.EmployeeService;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class EmployeeRepository implements IEmployeeRepository {
@@ -20,23 +17,19 @@ public class EmployeeRepository implements IEmployeeRepository {
     private EmployeeFactory employeeFactory;
 
     @Override
-    public Observable<List<Employee>> getEmployee(int id) {
+    public Flux<Employee> getEmployee(int id) {
         return employeeService.
                 getEmployees()
-                .map(apiEmployees ->apiEmployees
-                        .stream()
-                        .filter(apiEmployee -> apiEmployee.id == id)
-                        .map(apiEmployee -> employeeFactory.getEmployee(apiEmployee))
-                        .collect(Collectors.toList()));
+                .flatMapMany(Flux::fromIterable)
+                .filter(dataEmployee -> dataEmployee.getId() == id)
+                .map(dataEmployee -> employeeFactory.getEmployee(dataEmployee));
     }
 
     @Override
-    public Observable<List<Employee>> getEmployees() {
+    public Flux<Employee> getEmployees() {
         return employeeService.
                 getEmployees()
-                .map(apiEmployees ->apiEmployees
-                        .stream()
-                        .map(apiEmployee -> employeeFactory.getEmployee(apiEmployee))
-                        .collect(Collectors.toList()));
+                .flatMapMany(Flux::fromIterable)
+                .map(dataEmployee -> employeeFactory.getEmployee(dataEmployee));
     }
 }

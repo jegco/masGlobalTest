@@ -1,10 +1,8 @@
 package usecases.base;
 
-import io.reactivex.Observable;
-
-import java.io.IOException;
+import reactor.core.publisher.Flux;
 
 public interface IUseCase<R, P> {
 
-    Observable<R> execute(P params);
+    Flux<R> execute(P params);
 }

@@ -13,12 +13,12 @@ public class DataEmployeeHourlySalaryContractEmployeeMapper implements Function<
 
     @Override
     public HourlySalaryContractEmployee apply(DataEmployee dataEmployee) {
-        return new HourlySalaryContractEmployee(
-                dataEmployee.id,
-                dataEmployee.name,
-                dataEmployee.contractTypeName,
-                dataEmployee.roleDescription,
-                dataEmployee.roleName,
-                dataEmployee.hourlySalary);
+        return  new HourlySalaryContractEmployee(
+                dataEmployee.getId(),
+                dataEmployee.getName(),
+                dataEmployee.getContractTypeName(),
+                dataEmployee.getRoleName(),
+                dataEmployee.getRoleName(),
+                dataEmployee.getHourlySalary());
     }
 }

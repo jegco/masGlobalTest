@@ -16,7 +16,7 @@ import java.util.List;
 
 public class EmployeeUseCaseTest {
 
-    private TestObserver<List<Employee>> testObserver;
+    /*private TestObserver<List<Employee>> testObserver;
 
     MockResponse response = new MockResponse();
 
@@ -44,5 +44,5 @@ public class EmployeeUseCaseTest {
     public void getEmployee() {
         employeeRepository.getEmployee(1).subscribeWith(testObserver);
         testObserver.assertNoErrors().assertComplete().assertValue(employees -> employees.get(0).getId() == 1);
-    }
+    }*/
 }

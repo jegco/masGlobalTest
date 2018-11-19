@@ -14,11 +14,11 @@ public class DataEmployeeMonthlySalaryContractEmployeeMapper implements Function
     @Override
     public MonthlySalaryContractEmployee apply(DataEmployee dataEmployee) {
         return new MonthlySalaryContractEmployee(
-                dataEmployee.id,
-                dataEmployee.name,
-                dataEmployee.contractTypeName,
-                dataEmployee.roleDescription,
-                dataEmployee.roleName,
-                dataEmployee.monthlySalary);
+                dataEmployee.getId(),
+                dataEmployee.getName(),
+                dataEmployee.getContractTypeName(),
+                dataEmployee.getRoleName(),
+                dataEmployee.getRoleName(),
+                dataEmployee.getMonthlySalary());
     }
 }

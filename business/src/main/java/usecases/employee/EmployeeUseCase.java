@@ -1,23 +1,25 @@
 package usecases.employee;
 
-import io.reactivex.Observable;
 import model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import repositories.IEmployeeRepository;
-import usecases.base.ObservableUseCase;
+import usecases.base.FluxUseCase;
+import usecases.base.IUseCase;
 
-import java.io.IOException;
 import java.util.List;
 
 @Service
-public class EmployeeUseCase extends ObservableUseCase<List<Employee>, Integer> {
+public class EmployeeUseCase extends FluxUseCase<Employee, Integer> {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
 
+
     @Override
-    protected Observable<List<Employee>> buildUseCase(Integer params) {
+    public Flux<Employee> buildUseCase(Integer params) {
         return params == null ? employeeRepository.getEmployees() : employeeRepository.getEmployee(params);
     }
 }

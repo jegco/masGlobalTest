@@ -17,7 +17,7 @@ public class EmployeeFactory {
     private DataEmployeeMonthlySalaryContractEmployeeMapper dataEmployeeMonthlySalaryContractEmployeeMapper;
 
     public Employee getEmployee(DataEmployee dataEmployee) {
-        switch (dataEmployee.contractTypeName) {
+        switch (dataEmployee.getContractTypeName()) {
             case "${datalayer.hoyrly-employee}":
                 return dataEmployeeHourlySalaryContractEmployeeMapper.
                         apply(dataEmployee);

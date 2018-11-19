@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'net.ltgt.apt' version '0.10'
 }
 
 version 'unspecified'
@@ -18,6 +19,7 @@ dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
     implementation group: 'org.springframework', name: 'spring-context', version: '3.0.2.RELEASE'
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_adapter"
+    implementation "com.jakewharton.retrofit:retrofit2-reactor-adapter:2.1.0"
     implementation 'com.squareup.okio:okio:1.6.0'
     implementation 'com.google.code.gson:gson:2.6.2'
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
@@ -25,6 +27,9 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$retrofit_interceptor"
     implementation "com.squareup.okhttp3:okhttp:$retrofit_interceptor"
     implementation "com.squareup.okhttp3:okhttp-urlconnection:$retrofit_interceptor"
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+
+    apt 'org.projectlombok:lombok:1.18.4'
 
     implementation project(":business")
 }
