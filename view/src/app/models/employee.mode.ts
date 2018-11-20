@@ -5,6 +5,5 @@ export interface Employee {
   roleId: number;
   role: string;
   roleDescription: any;
-  hourlySalary: number;
-  monthlySalary: number;
+  salary: number;
 }
